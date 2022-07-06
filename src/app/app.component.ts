@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserDataService } from './services/user-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'getpostapi';
+  Users:any;
+  constructor(private userdata:UserDataService){
+    this.userdata.users().subscribe((data)=>{
+      this.Users=data
+    })
+  }
 }

@@ -1,0 +1,7 @@
+<p>newuser works!</p>
+<form #addForm="ngForm" (ngSubmit)="loginUser(addForm.value)">
+ <input type="text" name="name" id="" placeholder="enter your name: " ngModel><br><br>
+ <input type="number" name="age" placeholder="enter your age: " ngModel><br><br>
+ <input type="email" name="email" placeholder="enter your email: " ngModel><br><br>
+ <button>Add</button>
+</form>
